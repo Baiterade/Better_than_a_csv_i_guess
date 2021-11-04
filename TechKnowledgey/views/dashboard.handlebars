@@ -1,0 +1,14 @@
+{{#each post}}
+<div class = "row center">
+    <a href=/post/{{this.id}}>
+    <div class = "card">
+            <h2>
+            {{this.title}}
+            </h2>
+        </div>
+    </a>
+</div>
+{{else}}
+    <p class='empty'>No posts to display.</p>
+{{/each}}
+<a href="/newPost"><button class="btn">Create Post</button></a>

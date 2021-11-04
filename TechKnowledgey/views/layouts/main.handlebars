@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechKnowledgey</title>
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>TechKnowledgey</h1>
+  </header>
+  <nav>
+    <a href="/"><button class="btn">Home</button></a>
+    {{#if loggedIn}}
+    <a href="/dashboard"><button class="btn">Dashboard</button></a>
+    <a><button id="logout" class="btn">Logout</button></a>
+    {{else}}
+    <a href="/login"><button class="btn">Login</button></a>
+    {{/if}}
+  </nav>
+  <main>
+    <div class="content">
+      {{{body}}}
+    </div>
+  </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
